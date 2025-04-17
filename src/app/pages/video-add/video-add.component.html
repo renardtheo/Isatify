@@ -1,0 +1,24 @@
+<div class="video-add-container">
+    <h2>Ajouter une vidéo</h2>
+    
+    <!-- Formulaire -->
+    <form (ngSubmit)="addVideo()">
+      <label>Nom</label>
+      <input type="text" [(ngModel)]="title" name="title" required />
+    
+      <label>Description</label>
+      <textarea [(ngModel)]="description" name="description"></textarea>
+    
+      <label>Lien YouTube</label>
+      <input type="text" [(ngModel)]="url" name="url" required />
+    
+      <button type="submit">Ajouter</button>
+    </form>
+  
+    <!-- Message de succès dans le HTML -->
+    <p class="success" *ngIf="successMessage === 'Vidéo ajoutée avec succès'">{{ successMessage }}</p>
+    
+    <!-- Message d'erreur dans le HTML -->
+    <p class="error" *ngIf="errorMessage === 'Erreur lors de l\'ajout'">{{ errorMessage }}</p>
+  </div>
+  

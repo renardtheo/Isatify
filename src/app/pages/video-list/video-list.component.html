@@ -1,0 +1,28 @@
+<div class="video-container">
+  <h2>Liste des vidéos</h2>
+
+  <button *ngIf="authService.isLoggedIn()" (click)="toggleForm()">
+    {{ showForm ? 'Annuler' : 'Ajouter une vidéo' }}
+  </button>
+
+  <div *ngIf="showForm" class="form-section">
+    <input
+      type="text"
+      placeholder="Collez un lien YouTube"
+      [(ngModel)]="newVideoLink"
+    />
+    <button (click)="addVideo()">Ajouter</button>
+  </div>
+
+  <ul class="video-list">
+    <li *ngFor="let video of videos">
+      <iframe
+        width="560"
+        height="315"
+        [src]="'https://www.youtube.com/embed/' + video.id | safeUrl"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </li>
+  </ul>
+</div>

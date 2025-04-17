@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {  // OnInit pour vérifier l'éta
 
   login() {
     if (this.authService.login(this.username, this.password)) {
-      this.router.navigate(['/home']);  // Redirection vers la page d'accueil
+      this.router.navigate(['/videos']);  // Redirection vers la page d'accueil
     } else {
       this.errorMessage = 'Nom d\'utilisateur ou mot de passe incorrect';
     }
