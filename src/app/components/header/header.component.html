@@ -1,0 +1,13 @@
+<header class="app-header">
+  <div class="logo-container">
+    <!-- Le chemin de l'image doit être accessible via assets -->
+    <img src="assets/logo.png" alt="Logo" class="logo" />
+    <span class="app-name">Isatisfy</span>
+  </div>
+  <nav>
+    <a routerLink="/home" *ngIf="isLoggedIn">Accueil</a>
+    <a routerLink="/login" *ngIf="!isLoggedIn">Se connecter</a>
+    <a routerLink="/register" *ngIf="!isLoggedIn">S'inscrire</a>
+    <button *ngIf="isLoggedIn" (click)="logout()">Se déconnecter</button>
+  </nav>
+</header>

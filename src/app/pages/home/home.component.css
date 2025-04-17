@@ -1,0 +1,31 @@
+.home-container {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+    color: #f2f2f2;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .home-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .home-container .brand {
+    color: #e50914; /* rouge Netflix */
+    font-weight: bold;
+  }
+  
+  .home-container .subtitle {
+    font-size: 1.2rem;
+    color: #bbb;
+    margin-top: 10px;
+  }
+  
+  .warning {
+    color: #ff4c4c;
+  }
+  

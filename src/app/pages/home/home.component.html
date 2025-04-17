@@ -1,0 +1,12 @@
+<div class="home-container">
+    <h1 *ngIf="isLoggedIn; else notLoggedIn">Bienvenue sur <span class="brand">Isatisfy</span> !</h1>
+    
+    <ng-template #notLoggedIn>
+      <h1 class="warning">Veuillez vous connecter pour accéder au contenu.</h1>
+    </ng-template>
+  
+    <p class="subtitle" *ngIf="isLoggedIn">
+      Profitez de nos vidéos de qualité, sur une plateforme fluide et stylée.
+    </p>
+  </div>
+  
